@@ -1,0 +1,150 @@
+{
+  "personal": {
+    "name": "Ritheesh Mekala",
+    "title": "AI/ML Research Engineer",
+    "currentRole": "AI/ML Research Engineer @ ThinkArc, Inc.",
+    "location": "United States (Remote)",
+    "email": "mekala.ritheeshreddy@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/ritheesh-mekala-364811231/",
+    "github": "https://github.com/babluritheesh",
+    "profileImage": "/images/photo.jpg"
+  },
+  "experience": [
+    {
+      "id": "thinkarc-ai-research",
+      "company": "ThinkArc, Inc.",
+      "position": "Co-founder & CTO",
+      "duration": "Jun 2025 - Present",
+      "location": "United States · Remote",
+      "description": "Co-founded ThinkArc as CTO, leading technical development at FinderBee, a universal AI service marketplace pioneering machine-readable service layers for the AI-native internet. Architecting intelligent applications using large language models and agent frameworks.",
+      "highlights": [
+        "Co-founded ThinkArc as CTO, leading technical architecture and development",
+        "Building LLM-integrated microservices using FastAPI, LangChain, and pgvector for FinderBee marketplace",
+        "Designing OAuth 2.1 authorization workflows and AI-to-service gateways for secure service interoperability",
+        "Advancing research on agent context alignment, retrieval augmented generation (RAG), and prompt engineering at scale",
+        "Leading technical team in developing Model Context Protocol (MCP) implementations"
+      ],
+      "technologies": ["Python", "FastAPI", "LangChain", "pgvector", "OAuth 2.1", "Model Context Protocol", "AI Agents"]
+    },
+    {
+      "id": "cognera-health-ai",
+      "company": "Cognera Health, Inc.",
+      "position": "AI/LLM Engineer",
+      "duration": "Jan 2025 - Jun 2025",
+      "location": "United States · Remote",
+      "description": "Played key role in achieving $100K Alabama Launchpad Winner status for Cognera Health. Led design and deployment of GenAI-powered healthcare features to support clinical documentation, crisis detection, and patient summaries. Implemented HIPAA-compliant RAG systems using Supabase and pgvector.",
+      "highlights": [
+        "Key contributor to Alabama Launchpad Winner achievement ($100K funding)",
+        "Developed secure, multi-tenant FastAPI services for HIPAA-compliant LLM workflows",
+        "Built collaborative intelligence systems with full audit tracking",
+        "Implemented SOAP note generation, behavioral health assessments (PHQ-9, GAD-7), and AI-assisted diagnostics",
+        "Containerized services with Docker and managed production workloads via Azure App Services and AKS"
+      ],
+      "technologies": ["Python", "FastAPI", "Supabase", "pgvector", "Azure", "Docker", "HIPAA Compliance"]
+    },
+    {
+      "id": "ibm-azure-specialist",
+      "company": "IBM",
+      "position": "Azure Infrastructure Specialist",
+      "duration": "Sep 2021 - Aug 2023",
+      "location": "Bengaluru, Karnataka, India",
+      "description": "Specialized in Azure Infrastructure as a Service (IaaS), cluster management, and cloud infrastructure optimization.",
+      "highlights": [
+        "Managed large-scale Azure infrastructure deployments",
+        "Optimized cloud resource utilization and cost management",
+        "Implemented infrastructure automation and monitoring solutions"
+      ],
+      "technologies": ["Microsoft Azure", "Azure IaaS", "Infrastructure Management", "Cloud Optimization"]
+    },
+    {
+      "id": "lumos-learning-engineer",
+      "company": "Lumos Learning",
+      "position": "Associate Software Engineer",
+      "duration": "Jun 2020 - Sep 2021",
+      "location": "Bengaluru, Karnataka, India",
+      "description": "Implemented code using Python with Django frameworks and REST API. Interacted with clients for requirement analysis, design, code reviews, and code refactoring.",
+      "highlights": [
+        "Developed web applications using Python and Django",
+        "Built and maintained REST APIs",
+        "Conducted client requirement analysis and system design",
+        "Performed code reviews and refactoring for improved code quality"
+      ],
+      "technologies": ["Python", "Django", "REST APIs", "Web Services"]
+    }
+  ],
+  "education": [
+    {
+      "id": "troy-university-mscs",
+      "institution": "Troy University",
+      "degree": "Master's degree, Computer Science",
+      "duration": "Aug 2023 - Dec 2024",
+      "grade": "3.8",
+      "location": "United States",
+      "coursework": [
+        "AI & Machine Learning",
+        "Advanced Algorithms & Data Structures",
+        "Cloud Computing (Azure & AWS)",
+        "Deep Learning & Neural Networks",
+        "Software Engineering & Agile",
+        "Database Systems & Big Data",
+        "Cybersecurity & Risk Management",
+        "Natural Language Processing",
+        "DevOps & MLOps Practices",
+        "Research Methods in CS"
+      ]
+    },
+    {
+      "id": "manipal-mba",
+      "institution": "Manipal Institute of Technology",
+      "degree": "MBA, Accounting and Finance",
+      "duration": "Jul 2022 - Aug 2024",
+      "grade": "7.76",
+      "location": "India",
+      "coursework": ["Financial Accounting", "Financial Analysis", "Insurance", "Project Management"]
+    },
+    {
+      "id": "jain-university-bcs",
+      "institution": "Jain (Deemed-to-be University)",
+      "degree": "Bachelor's degree, Computer Science",
+      "duration": "Aug 2016 - Aug 2020",
+      "location": "India",
+      "coursework": ["AWS", "Azure", "Python", "Java", "SQL", "Critical Thinking", "Problem Solving", "DNS", "Client Requirements", "OOP"]
+    }
+  ],
+  "certifications": [
+    {
+      "id": "azure-administrator",
+      "name": "Microsoft Certified: Azure Administrator Associate",
+      "issuer": "Microsoft",
+      "credentialId": "AZ-104",
+      "issueDate": "2022",
+      "image": "https://i.postimg.cc/q7BVfYZV/azure-administrator-associate-600x600.png",
+      "credlyUrl": "https://credly.com"
+    },
+    {
+      "id": "azure-devops-engineer",
+      "name": "Microsoft Certified: Azure DevOps Engineer Expert",
+      "issuer": "Microsoft",
+      "credentialId": "AZ-400",
+      "issueDate": "2022",
+      "image": "https://i.postimg.cc/Y0WTfwjg/AZ-400-Microsoft-Certified-Azure-Dev-Ops-Engineer.jpg"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "alabama-launchpad-winner",
+      "title": "Alabama Launchpad 2025 Winner",
+      "description": "Cognera Health selected as finalist and winner of Alabama Launchpad, Alabama's premier startup competition",
+      "date": "2025",
+      "organization": "Alabama Launchpad"
+    }
+  ],
+  "skills": {
+    "programming": ["Python", "TypeScript", "JavaScript", "Java", "SQL"],
+    "ai_ml": ["GenAI", "LangChain", "FastAPI", "pgvector", "RAG", "LLM Integration", "Model Context Protocol"],
+    "cloud": ["Microsoft Azure", "AWS", "Azure App Services", "AKS", "Docker", "Kubernetes"],
+    "web": ["Next.js", "React", "Django", "REST APIs", "Web Services"],
+    "databases": ["PostgreSQL", "Supabase", "Redis", "MongoDB"],
+    "other": ["HIPAA Compliance", "OAuth 2.1", "Multi-tenant Architecture", "Infrastructure Management"]
+  }
+}
