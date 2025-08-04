@@ -100,7 +100,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               </div>
               <div className="text-brandColorSecondary leading-relaxed max-w-lg mx-auto desktop:mx-0 space-y-4">
                 <p>
-                  Co-founder & CTO at <span className="text-brandColorText font-medium">ThinkArc</span>, where I'm shaping the future of AI-native infrastructure. Previously led the technical efforts that helped <span className="text-brandColorText font-medium">Cognera Health</span> win the <span className="text-brandColorPrimary font-medium">Alabama Launchpad ($100K)</span> by delivering real-world AI solutions for healthcare.
+                  Co-founder & CTO at <span className="text-brandColorText font-medium">ThinkArc</span>, where I&apos;m shaping the future of AI-native infrastructure. Previously led the technical efforts that helped <span className="text-brandColorText font-medium">Cognera Health</span> win the <span className="text-brandColorPrimary font-medium">Alabama Launchpad ($100K)</span> by delivering real-world AI solutions for healthcare.
                 </p>
                 
                 <p>

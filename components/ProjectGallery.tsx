@@ -8,6 +8,31 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects, categories })
   const [activeCategory, setActiveCategory] = useState<string>('All Projects');
   const [showAllProjects, setShowAllProjects] = useState(false);
 
+  // Create domain categories mapping based on actual data
+  const domainCategories = useMemo(() => [
+    { name: 'All Projects', key: 'All' },
+    { name: 'GenAI', key: 'GenAI' },
+    { name: 'Healthcare AI', key: 'Healthcare AI' },
+    { name: 'MLOps', key: 'MLOps' },
+    { name: 'Web Development', key: 'Web Development' },
+    { name: 'Cloud Infrastructure', key: 'Cloud Infrastructure' },
+  ], []);
+
+  // Filter projects based on active category
+  const filteredProjects = useMemo(() => {
+    if (!projects || projects.length === 0) {
+      return [];
+    }
+    if (activeCategory === 'All Projects') {
+      return projects;
+    }
+    const selectedCategory = domainCategories.find(cat => cat.name === activeCategory);
+    if (selectedCategory) {
+      return projects.filter(project => project.category === selectedCategory.key);
+    }
+    return projects;
+  }, [projects, activeCategory, domainCategories]);
+
   // Handle case where no projects are provided
   if (!projects || projects.length === 0) {
     return (
@@ -26,28 +51,6 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects, categories })
       </section>
     );
   }
-
-  // Create domain categories mapping based on actual data
-  const domainCategories = [
-    { name: 'All Projects', key: 'All' },
-    { name: 'GenAI', key: 'GenAI' },
-    { name: 'Healthcare AI', key: 'Healthcare AI' },
-    { name: 'MLOps', key: 'MLOps' },
-    { name: 'Web Development', key: 'Web Development' },
-    { name: 'Cloud Infrastructure', key: 'Cloud Infrastructure' },
-  ];
-
-  // Filter projects based on active category
-  const filteredProjects = useMemo(() => {
-    if (activeCategory === 'All Projects') {
-      return projects;
-    }
-    const selectedCategory = domainCategories.find(cat => cat.name === activeCategory);
-    if (selectedCategory) {
-      return projects.filter(project => project.category === selectedCategory.key);
-    }
-    return projects;
-  }, [projects, activeCategory]);
 
   // Format date to match the design
   const formatDate = (dateString: string) => {

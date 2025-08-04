@@ -3,7 +3,8 @@ node_modules/
 
 # Next.js
 /.next/
-/out/
+# Don't ignore out/ for GitHub Pages static files
+# /out/
 
 # TypeScript
 *.tsbuildinfo

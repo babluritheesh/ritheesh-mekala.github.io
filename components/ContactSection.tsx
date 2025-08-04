@@ -19,10 +19,10 @@ const ContactSection: React.FC = () => {
           {/* Let's Connect */}
           <div className="bg-brandColorCard rounded-lg p-8 border border-brandColorBorder">
             <h3 className="text-xl font-semibold text-brandColorText mb-4">
-              Let's Connect
+              Let&apos;s Connect
             </h3>
             <p className="text-brandColorSecondary mb-6 leading-relaxed">
-              I'm excited to collaborate on innovative projects and explore new opportunities in 
+              I&apos;m excited to collaborate on innovative projects and explore new opportunities in 
               the world of AI and software development.
             </p>
             

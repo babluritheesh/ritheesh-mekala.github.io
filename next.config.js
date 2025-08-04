@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Enable static exports for GitHub Pages
+  output: 'export',
+  trailingSlash: true,
+  basePath: '/ritheesh-mekala.github.io',
+  
   images: {
+    // Disable image optimization for static export
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -27,11 +34,6 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
-    // Image optimization settings
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [320, 420, 768, 1024, 1200, 1920],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
     dangerouslyAllowSVG: false,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
