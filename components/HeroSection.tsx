@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { HeroSectionProps } from '@/types';
 import OptimizedImage from './OptimizedImage';
+import { getImagePath } from '@/utils/assetPath';
 
 const HeroSection: React.FC<HeroSectionProps> = ({
   name = "Portfolio Owner",
@@ -51,7 +52,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
   return (
     <section id="about" className="min-h-screen flex items-center justify-center px-4 mobile:px-6 tablet:px-8 py-20 mobile:py-24 tablet:py-32 bg-brandColorBackground">
-      <div className="max-w-7xl mx-auto w-full">
+      <div className="max-w-5xl mx-auto w-full">
         <div className="grid grid-cols-1 desktop:grid-cols-2 gap-8 mobile:gap-10 tablet:gap-12 desktop:gap-16 items-center min-h-[80vh]">
           {/* Content Section */}
           <div className="order-2 desktop:order-1 text-center desktop:text-left space-y-6 mobile:space-y-8 flex flex-col justify-center">
@@ -119,34 +120,25 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="order-1 desktop:order-2 flex flex-col items-center justify-start desktop:justify-start -mt-12 desktop:-mt-80">
             <div className="relative mb-4">
               <div className="w-64 h-64 mobile:w-80 mobile:h-80 tablet:w-96 tablet:h-96 desktop:w-[420px] desktop:h-[420px] relative rounded-full overflow-hidden shadow-2xl border-4 border-white transition-all duration-500 hover:shadow-3xl hover:scale-105">
-                {/* Temporary debug: using regular img tag */}
+                {/* Debug: Let's see what paths are being used */}
                 <img
                   src={profileImage}
                   alt={`${name} - Profile Picture`}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   onError={(e) => {
                     console.error('Image failed to load:', profileImage);
+                    console.error('Attempted URL:', (e.target as HTMLImageElement).src);
+                    console.error('Current working directory context');
                     setImageError(true);
-                    // Fallback to default avatar
+                    // Try fallback
                     (e.target as HTMLImageElement).src = '/images/default-avatar.svg';
                   }}
-                  onLoad={() => console.log('Image loaded successfully:', profileImage)}
+                  onLoad={() => {
+                    console.log('✅ Image loaded successfully!');
+                    console.log('Profile image path:', profileImage);
+                    console.log('Actual loaded URL:', (document.querySelector('img[alt*="Profile Picture"]') as HTMLImageElement)?.src);
+                  }}
                 />
-                {/* Original OptimizedImage component - commented out for debugging
-                <OptimizedImage
-                  src={profileImage}
-                  alt={`${name} - Profile Picture`}
-                  fill
-                  className="object-cover transition-transform duration-500 hover:scale-110"
-                  priority
-                  sizes="(max-width: 320px) 256px, (max-width: 768px) 320px, (max-width: 1024px) 384px, 420px"
-                  placeholder="empty"
-                  quality={90}
-                  skeletonClassName="rounded-full"
-                  fallbackSrc="/images/default-avatar.svg"
-                  onError={() => setImageError(true)}
-                />
-                */}
               </div>
               {/* Decorative elements - responsive sizing */}
               <div className="absolute -top-2 -right-2 mobile:-top-4 mobile:-right-4 w-16 h-16 mobile:w-24 mobile:h-24 bg-brandColorAccent/20 rounded-full blur-xl animate-pulse"></div>

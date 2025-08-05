@@ -1,0 +1,15 @@
+[
+  {
+    "id": "dbms-ai-tuning-2024",
+    "title": "Workload-Based Performance Tuning in Database Management Systems through Integration of Artificial Intelligence",
+    "abstract": "Traditional methods of performance tuning in Database Management Systems (DBMS) are facing significant challenges in adapting to the dynamic nature of modern workloads. This paper proposes a novel approach for workload-based performance tuning through the integration of Artificial Intelligence (AI), leveraging machine learning and predictive modeling to automate workload analysis and dynamically adjust DBMS configurations for optimal performance.",
+    "journal": "International Journal of Innovative Science and Research Technology (IJISRT)",
+    "date": "2024-01-15",
+    "url": "https://www.ijisrt.com/workloadbased-performance-tuning-in-database-management-systems-through-integration-of-artificial-intelligence",
+    "tags": ["AI", "Database Management", "Machine Learning", "Performance Optimization", "DBMS"],
+    "type": "Research Paper",
+    "readTime": "24 min read",
+    "featured": true,
+    "icon": "📄"
+  }
+]

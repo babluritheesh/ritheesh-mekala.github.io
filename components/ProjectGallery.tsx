@@ -37,7 +37,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects, categories })
   if (!projects || projects.length === 0) {
     return (
       <section id="projects" className="py-12 px-4 bg-brandColorBackground min-h-screen">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-brandColorText mb-4">Projects</h2>
             <p className="text-brandColorSecondary text-lg">
@@ -60,7 +60,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects, categories })
 
   return (
     <section id="projects" className="py-20 px-4 bg-brandColorBackground min-h-screen">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-brandColorText mb-4">Projects</h2>

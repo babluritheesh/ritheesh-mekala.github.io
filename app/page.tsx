@@ -3,11 +3,13 @@ import HeroSection from '@/components/HeroSection';
 import ExperienceSection from '@/components/ExperienceSection';
 import EducationSection from '@/components/EducationSection';
 import ProjectGallery from '@/components/ProjectGallery';
+import PublicationsSection from '@/components/PublicationsSection';
 import ContactSection from '@/components/ContactSection';
 import PerformanceMonitor from '@/components/PerformanceMonitor';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import projectsData from '@/data/projects.json';
 import profileData from '@/data/profile.json';
+import publicationsData from '@/data/publications.json';
 import { Project } from '@/types';
 import { validateProjects, validateHeroData } from '@/utils/dataValidation';
 
@@ -38,6 +40,9 @@ export default function Home() {
     <div className="bg-brandColorBackground min-h-screen transition-colors duration-300">
       <PerformanceMonitor />
       <Navigation />
+      
+      {/* Main content container with slight right offset for perfect centering */}
+      <div className="transform translate-x-32">
       
       <ErrorBoundary
         fallback={
@@ -101,7 +106,23 @@ export default function Home() {
         <ProjectGallery projects={projects} categories={categories} />
       </ErrorBoundary>
 
+      <ErrorBoundary
+        fallback={
+          <div className="py-12 px-4 text-center bg-brandColorBackground">
+            <h2 className="text-2xl font-bold text-brandColorText mb-4">
+              Unable to load publications
+            </h2>
+            <p className="text-brandColorSecondary">
+              There was an error loading the publications section.
+            </p>
+          </div>
+        }
+      >
+        <PublicationsSection publications={publicationsData} />
+      </ErrorBoundary>
+
       <ContactSection />
+      </div>
     </div>
   )
 }

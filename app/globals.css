@@ -36,6 +36,50 @@ body {
   background: var(--brand-background);
   font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.6;
+  /* 75% zoom effect that fills the screen */
+  zoom: 0.75;
+  -moz-transform: scale(0.75);
+  -moz-transform-origin: 0 0;
+}
+
+/* Fallback for Firefox */
+@-moz-document url-prefix() {
+  body {
+    zoom: normal;
+    transform: scale(0.75);
+    transform-origin: 0 0;
+    width: 133.33vw;
+    height: 133.33vh;
+  }
+}
+
+/* Adjust for different screen sizes */
+@media (max-width: 768px) {
+  body {
+    zoom: 0.75;
+  }
+  
+  @-moz-document url-prefix() {
+    body {
+      transform: scale(0.75);
+      width: 133.33vw;
+      height: 133.33vh;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    zoom: 0.8;
+  }
+  
+  @-moz-document url-prefix() {
+    body {
+      transform: scale(0.8);
+      width: 125vw;
+      height: 125vh;
+    }
+  }
 }
 
 a {

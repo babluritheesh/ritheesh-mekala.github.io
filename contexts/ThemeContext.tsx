@@ -26,10 +26,9 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   // Handle hydration
   useEffect(() => {
     setMounted(true);
-    // Check for saved theme preference or system preference
+    // Check for saved theme preference, default to dark if none exists
     const savedTheme = localStorage.getItem('theme') as Theme;
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    const initialTheme = savedTheme || systemTheme;
+    const initialTheme = savedTheme || 'dark'; // Default to dark theme
     setTheme(initialTheme);
   }, []);
 

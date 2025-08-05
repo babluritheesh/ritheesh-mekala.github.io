@@ -3,7 +3,7 @@ const nextConfig = {
   // Enable static exports for GitHub Pages
   output: 'export',
   trailingSlash: true,
-  basePath: '/ritheesh-mekala.github.io',
+  basePath: process.env.NODE_ENV === 'production' ? '/ritheesh-mekala.github.io' : '',
   
   images: {
     // Disable image optimization for static export

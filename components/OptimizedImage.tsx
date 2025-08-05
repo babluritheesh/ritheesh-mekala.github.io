@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Skeleton from './LoadingSkeleton';
 import ErrorBoundary from './ErrorBoundary';
+import { getImagePath } from '@/utils/assetPath';
 
 interface OptimizedImageProps {
   src: string;
@@ -104,7 +105,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   };
 
   const imageProps = {
-    src: currentSrc,
+    src: getImagePath(currentSrc),
     alt,
     className: `${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`,
     priority,
